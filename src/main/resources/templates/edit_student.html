@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class ="container">
+<div class ="row">
+
+<h1  class ="text-center"> update student</h1>
+<div class = "card-body">
+<form th:action="@{/students/{id}(id=${student.id})}" th:object="${student}" method="post">
+
+<div class ="form-group">
+<label>Studnet first name</label>
+
+<input
+type ="text"
+name ="firstName"
+th:field ="*{firstName}"
+class ="form-control"
+placeholder="enter the student first name"
+/>
+
+</div>
+
+<div class ="form-group">
+<label>Studnet email</label>
+<input
+type ="text"
+name ="lastName"
+th:field ="*{lastName}"
+class ="form-control"
+placeholder="enter the student first name"
+/>
+</div>
+
+
+<div class ="form-group">
+<label>Studnet email</label>
+<input
+type ="text"
+name ="email"
+th:field ="*{email}"
+class ="form-control"
+placeholder="enter the student email"
+/>
+</div>
+
+</div>
+
+<button type ="submit" class ="btn btn-primary">
+submit
+</button>
+
+</form>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
