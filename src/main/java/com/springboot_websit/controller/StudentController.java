@@ -63,7 +63,7 @@ public class StudentController {
 	}
 	 @GetMapping("/students/{id}")
 	public String deleteStudent(@PathVariable Long id) {
-	studnetService.deleteStudentById(id);	
+     studnetService.deleteStudentById(id);	
 	return "redirect:/students";
 	}
 	
